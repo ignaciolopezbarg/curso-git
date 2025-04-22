@@ -1,0 +1,41 @@
+git : sistema de control de las distintas versiones de un proyecto, registrando la historia de los cambios y como ha ido evolucionando. Hay tres sectores
+--Area de trabajo
+--Stage donde se almacenan los cambios
+--Repositorio
+Commits es el registro de los cambios que realizamos, es como un snapshot del proyecto.
+Iniciamos con $git init, ya sea en la terminal bash o en el cmd
+$ git add . (cargamos todo al stage) o $ git add <nombre archivo> o $ git add --all
+$ git status nos da el estado de lo que hicimos, que esta pasando.
+$ git commit -m '<texto>' guardamos el el commit, si quiero cambiar el texto del commit: $ git commit --amend-m '<nuevo texto>'
+$ git log me da todos los commits que tengo
+$ git log --oneline me da el log reducido, util para trabajar
+si quiero ver algun commit $ git show <id del commit> y me muestra que hice en ese commit
+$ git diff me da lo que entre el ultimo commit y lo que tengo en el area de trabajo
+$ git diff <commit1> <commit2> me marca cuales son los cambios en la rama donde estoy
+ LOS COMMITS NO DESAPARECEN, NO SE PIERDEN, salvo cuando no lo pushee y hago un git reset force (ver luego)
+ $ git push , lo guardo en el remoto
+ $ git checkout <nombre de la rama> me posiciono en la rama
+ $ git checkout -D <nombre rama> Elimino rama
+ $ git branch <new name> creo una nueva rama
+ $ git checkout -b <name> tambien creo una rama nueva y me posiciona en ella
+ $ git checkout <id commit> me lleva a ese commit
+
+ $ git reset con tres banderas distintas
+ soft: borra el git add . pero queda el directorio igual
+ mixed: borra git add . y el directorio actual, desde el ultimo commit hasta ahora
+ hard: borra lo anterior y los commits que no se hayan pusheado.
+
+ $ git stash : puedo guardar en el stash, ir a otra rama, volver y recuperar y seguir, todo sin haberlos comitiados. banderas
+ stash drop elimina los cambios en el stash
+ stash list  me lista todos los stash
+ stash apply aplica los stash a la rama, los guarda
+ stash pop carga la rama y elimina el stash
+
+ main
+ develop-feature/header
+ develop-feature/footer etc
+ fix/<nombre>
+
+ Borrar ramas cuando ya se utilizaron. La main usarla solo al final
+
+ esto es git-flow
