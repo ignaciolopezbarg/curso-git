@@ -1,0 +1,10 @@
+GitHub (desarrollado por Micorsoft) utiliza Git (desarrollado por Linux), existen otras plataformas alternativas a GitHub como GitLab,etc.
+Cualquiera crea una cuenta gratuita, individual
+
+Como se incrementa la seguridad:
+Habilitar autentificacion en dos factores, uno ya lo tenemos que es el password, el segundo ver en settings y por ejemplo hay con el movil, con dato adicional, etc
+
+Tipos de cuenta: 
+1.- Personal  2.- Orgacicional 3.- Empresarial
+Personal:
+1a.- Free  1.b.- Pro
